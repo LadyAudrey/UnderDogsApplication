@@ -1,0 +1,22 @@
+# Program to create a list for all of the words that have a B and an X and are less than 5 letters long?
+
+# importing the word list
+sow_pods = open("/home/evergreen/UD/.idea/SowPods")
+
+# Go through each word in the file and add it to the list, words
+words = []
+bx = []
+bx5 = []
+
+for line in sow_pods:
+    words.append(line.strip())
+
+for w in words:
+  if ("B" in w) and ("X"  in w):
+      bx.append(w)
+
+for y in bx:
+    if len(y) < 5:
+        bx5.append(y)
+    
+print('All of the words that have B and X and are less than 5 letters long are:' + str(bx5))
