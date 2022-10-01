@@ -14,17 +14,17 @@ for w in words:
     if ("A" in w) and ("E" in w) and ("I" in w) and ("O" in w)and ("U" in w) and ("Y" in w):
         vowels.append(w)
 
-#print('All of the words that have  vowels, including Y are ' + str(vowels))
+print('All of the words that have  vowels, including Y are ' + str(vowels))
 
 # Find the longest word that has no vowels
-#shortest = 'RHEUMATOIDALLY'
-#length = len(shortest)
-#for y in vowels:
-#    if len(y) < length:
- #       shortest = y
-  #      length = len(shortest)
+shortest = 'RHEUMATOIDALLY'
+length = len(shortest)
+for y in vowels:
+    if len(y) < length:
+        shortest = y
+        length = len(shortest)
 
-#print('The shortest word with all the vowels in it is ' + str(shortest))
+print('The shortest word with all the vowels in it is ' + str(shortest))
 
 a = int()
 e = int()

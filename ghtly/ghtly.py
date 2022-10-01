@@ -10,7 +10,7 @@ sow_pods = open("/home/evergreen/UD/.idea/SowPods")
 for line in sow_pods:
     words.append(line.strip())
 
-# Go through the list and add it to list_of_uu as appropriate
+# Go through the list and add it to list_of_ghtly as appropriate
 for x in range(len(words)):
     if ghtly in words[x]:
         list_of_ghtly.append(words[x])                               
