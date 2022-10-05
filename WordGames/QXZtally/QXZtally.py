@@ -1,7 +1,7 @@
 # Create and compare a tally of how often Q, X and Z are used, with a final print statement of which is least common
 
 # importing the word list
-sow_pods = open("/home/evergreen/UD/.idea/SowPods")
+sow_pods = open("/home/evergreen/UnderDogsAssignments/sowpods")
 
 # Go through each word in the file and add it to the list, words
 words = []

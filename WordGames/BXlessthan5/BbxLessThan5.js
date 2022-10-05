@@ -9,7 +9,7 @@ const readFileLines = filename =>
    .split('\n');
 
 // Calling the readFiles function with file name
-let words = readFileLines('//home/evergreen/UnderDogsAssignemnts/sowpods');
+let words = readFileLines('/home/evergreen/UnderDogsAssignments/sowpods');
 b = []
 bx = []
 bxLessThan5 = []

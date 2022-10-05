@@ -4,7 +4,7 @@ type = 'TYPE'
 list_of_type = []
 
 # importing the word list
-sow_pods = open("/home/evergreen/UD/.idea/SowPods")
+sow_pods = open("/home/evergreen/UnderDogsAssignments/sowpods")
 
 # Go through each word in the file and add it to the list, words
 for line in sow_pods:

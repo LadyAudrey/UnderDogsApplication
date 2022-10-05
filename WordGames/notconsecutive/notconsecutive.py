@@ -1,7 +1,7 @@
 # Program to create a list for all of the letters that do not appear consecutively in a word 
 
 # importing the word list
-sow_pods = open("/home/evergreen/UD/.idea/SowPods")
+sow_pods = open("/home/evergreen/UnderDogsAssignments/sowpods")
 
 # Go through each word in the file and add it to the list, words
 words = []

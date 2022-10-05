@@ -1,7 +1,7 @@
 # Program to create a list for all of the words with no vowel and not even a Y
 
 # importing the word list
-sow_pods = open("/home/evergreen/UD/.idea/SowPods")
+sow_pods = open("/home/evergreen/UnderDogsAssignments/sowpods")
 
 # Go through each word in the file and add it to the list, words
 words = []
@@ -33,6 +33,8 @@ o = int()
 u = int()
 vowels_alph = []
 
+#Cycle through each index of vowels, find the placement of each vowel and then compare and 
+# add to vowels_alph accordingly
 for x in vowels:
     a = x.index("A")
     e = x.index("E")

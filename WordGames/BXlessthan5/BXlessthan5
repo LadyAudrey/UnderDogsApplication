@@ -1,7 +1,7 @@
 # Program to create a list for all of the words that have a B and an X and are less than 5 letters long
 
 # importing the word list
-sow_pods = open("/home/evergreen/UD/.idea/SowPods")
+sow_pods = open("/home/evergreen/UnderDogsAssignments/sowpods")
 
 # creating lists; one for the words, one for all the words that have B and X's
 # and one for all words that have B and X, less than 5
