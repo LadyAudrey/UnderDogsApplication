@@ -17,11 +17,16 @@ bxLessThan5 = []
 for(let i = 0; i < words.length; i++) { 
     if (words[i].includes("B")) {
         b.push(words[i]);
-    }
+    }    }
 
 for(let j = 0; j < b.length; j++) { 
     if (b[j].includes("X")) {
         bx.push(b[j]);
-    }
-}
-console.log("All the words that contain B and X and < 5 letters long are " + b)}
+    }}
+
+for(let k = 0; k < bx.length; k++) { 
+    if (bx[k].length < 5) {
+        bxLessThan5.push(bx[k]);
+    }}
+
+console.log("All the words that contain B and X and < 5 letters long are " + bxLessThan5)
