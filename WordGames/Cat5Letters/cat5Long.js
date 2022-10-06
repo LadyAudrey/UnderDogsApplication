@@ -17,16 +17,14 @@ cat5 = []
 for(let i = 0; i < words.length; i++) { 
     if (words[i].includes("CAT")) {
         cat.push(words[i]);
-    }
+    }}
 
 for(let j = 0; j < cat.length; j++) { 
     let long = cat[j].length;
-    if (long = 5) {
+    if (long == 5) {
         cat5.push(cat[j]);
         }
         }
-
-}
 console.log(cat5)
 
-//console.log("All the words with 2 consecutive Us are " + cat)}
+console.log("All the words containing 'cat' and are 5 letters long " + cat5)

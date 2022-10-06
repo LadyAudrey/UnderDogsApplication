@@ -9,16 +9,16 @@ const readFileLines = filename =>
    .split('\n');
 
 // Calling the readFiles function with file name
-let words = readFileLines('/home/evergreen/UnderDogsAssignemnts/sowpods');
+let words = readFileLines('/home/evergreen/UnderDogsAssignments/sowpods');
 
-letters = ["AA", "BB", "CC", "DD", "EE", "FF", "GG", "HH", "II", "JJ", "KK", "LL",
-           "MM", "NN", "OO", "PP", "QQ", "RR", "SS", "TT", "UU", "VV", "WW", "XX", "YY", "ZZ"]
+letters = ["AA", "BB", "CC", "DD", "EE", "FF", "GG", "HH", "II", "JJ", "KK", "LL", "MM", "NN", "OO", "PP", "QQ", "RR", "SS", "TT", "UU", "VV", "WW", "XX", "YY", "ZZ"]
 consecutive_letters = []
 
-for(let i = 0; i < letters.length; i++) { 
-    if (words[i].includes("UU")) {
-        uu.push(words[i]);
-    }
+for(let i = 25; i < letters.length; i-- ) 
+    for(let j = 0; j < words.length; j++) 
+        if (words[j].includes(letters[i])); {
+            letters.splice(letters[i], 1);
 
 }
-console.log("All the words with 2 consecutive Us are " + uu)
+console.log(letters)
+//console.log("Letters that are not consecutively are " + letters)

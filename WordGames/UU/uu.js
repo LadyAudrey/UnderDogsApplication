@@ -9,7 +9,7 @@ const readFileLines = filename =>
    .split('\n');
 
 // Calling the readFiles function with file name
-let words = readFileLines('/home/evergreen/UnderDogsAssignemnts/sowpods');
+let words = readFileLines('/home/evergreen/UnderDogsAssignments/sowpods');
 uu = []
 
 for(let i = 0; i < words.length; i++) { 
@@ -18,4 +18,4 @@ for(let i = 0; i < words.length; i++) {
     }
 
 }
-console.log("All the words with 2 consecutive Us are " + uu)
+console.log("All the words with 'uu' are " + uu)
