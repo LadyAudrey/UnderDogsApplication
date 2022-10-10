@@ -18,4 +18,4 @@ for(let i = 0; i < words.length; i++) {
         noVowels.push(words[i]);}
 
 
-console.log("The words containing no E's or A's and at least 15 letters long are " + noVowels)
+console.log("The words containing no vowels are " + noVowels)

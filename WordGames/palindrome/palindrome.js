@@ -1,5 +1,5 @@
 // Program to find all the words containing two consecutive U's
-// Not Currently Working
+// Currently can find the Palindromes but not the longest one
 // Importing the fs module
 let fs = require("fs")
 
@@ -13,6 +13,8 @@ const readFileLines = filename =>
 let words = readFileLines('/home/evergreen/UnderDogsAssignments/sowpods');
 let palindromes = []
 let longestPalindrome = ['AA']
+let howLong = longestPalindrome.length
+console.log(howLong)
 
 // Cycle through words and find all the palindromes by comparing last letter for first letters
 for (let i = 0; i < words.length - 2; i++) {
@@ -21,12 +23,12 @@ for (let i = 0; i < words.length - 2; i++) {
         palindromes.push(words[i])
     }}
 
-// Find the longest index in palindrome
-for(let j = 0; j < words.length; j++) {
-    if (palindromes[j].length > longestPalindrome.length) {
+// // Find the longest index in palindrome
+for (let j = 0; j < words.length; j++) {
+    if (palindromes[j].length > howLong) {
         let longestPalindrome = palindromes[j];
+        console.log(longestPalindrome)
     }}
 
-
 console.log("All the words that are palindromes are " + palindromes)
-console.log("The longest palindrome is " + longestPalindrome)
+//console.log("The longest palindrome is " + longestPalindrome)

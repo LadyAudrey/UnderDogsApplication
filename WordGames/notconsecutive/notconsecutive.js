@@ -1,5 +1,4 @@
 // Program to discover which letters never appeal consecutively
-// Nor Currently working
 // Importing the fs module
 let fs = require("fs")
 
