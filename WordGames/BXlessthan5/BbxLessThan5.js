@@ -11,23 +11,17 @@ const readFileLines = filename =>
 
 // Calling the readFiles function with file name
 let words = readFileLines('/home/evergreen/UnderDogsAssignments/sowpods');
-b = []
-bx = []
-bxLessThan5 = []
+
+let bx = []
+let bxLessThan5 = []
 
 for(let i = 0; i < words.length; i++) { 
-    if (words[i].includes("B")) {
-        b.push(words[i]);
-    }    }
+    if (words[i].includes("B") && words[i].includes("X")) {
+        bx.push(words[i]);}}
 
-for(let j = 0; j < b.length; j++) { 
-    if (b[j].includes("X")) {
-        bx.push(b[j]);
-    }}
-
-for(let k = 0; k < bx.length; k++) { 
-    if (bx[k].length < 5) {
-        bxLessThan5.push(bx[k]);
+for(let j = 0; j < bx.length; j++) { 
+    if (bx[j].length < 5 ) {
+        bxLessThan5.push(bx[j]);
     }}
 
 console.log("All the words that contain B and X and < 5 letters long are " + bxLessThan5)

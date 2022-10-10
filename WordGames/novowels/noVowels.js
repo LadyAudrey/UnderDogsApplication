@@ -14,7 +14,7 @@ noVowels = []
 
 // Cycle through words and append words that do not have AEIO or U in them to noVowels
 for(let i = 0; i < words.length; i++) {
-    if (!words[i].includes("A") && !words[i].includes("E") && !words[i].includes("I") && !words[i].includes("O") && !words[i].includes("U"))
+    if (!words[i].includes("A") && !words[i].includes("E") && !words[i].includes("I") && !words[i].includes("O") && !words[i].includes("U") && !words[i].includes("Y"))
         noVowels.push(words[i]);}
 
 
