@@ -12,15 +12,15 @@ const readFileLines = filename =>
 // Calling the readFiles function with file name
 let words = readFileLines('/home/evergreen/UnderDogsAssignments/sowpods');
 
-letters = ["AA", "BB", "CC", "DD", "EE", "FF", "GG", "HH", "II", "JJ", "KK", "LL", "MM", "NN", "OO", "PP", "QQ", "RR", "SS", "TT", "UU", "VV", "WW", "XX", "YY", "ZZ"]
-consecutive_letters = []
+letters = ["AA", "BB", "CC", "DD", "EE", "FF", "GG", "HH", "II", "JJ", "KK", "LL", 
+"MM", "NN", "OO", "PP", "QQ", "RR", "SS", "TT", "UU", "VV", "WW", "XX", "YY", "ZZ"]
+consecutive_Letters = []
 
-for(let i = 0; i < letters.length; i++ ) {
+for(let i = 0; i < letters.length; i++) {
     for(let j = 0; j < words.length; j++) {
-        if (words[j].indexOf("letters[i]")) === -1;
-            consecutive_letters.push(letters[i])
-            console.log(consecutive_letters)
-    }}
+        if (words[j].includes(letters[i])) {
+            letters.splice(i, 1);
+            continue
+        }}}
 
-console.log(consecutive_letters)
-//console.log("Letters that are not consecutively are " + letters)
+console.log("Letters that are not consecutively are " + letters)
