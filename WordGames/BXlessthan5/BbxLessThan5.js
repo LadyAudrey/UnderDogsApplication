@@ -1,4 +1,5 @@
 // Program to find all the words containing B and X, that are less than 5 letters long
+//not currently working right
 // Importing the fs module
 let fs = require("fs")
 
