@@ -37,4 +37,15 @@ for(let j = 0; j < aeiou.length; j++) {
         }
     }
 }
-console.log("All words containing the vowels alphabetically are " + aeiou_Alph)
+
+// Find the shortest the shortest word with all the vowels
+let shortestAllVowels = "VERACIOUSNESSES";
+for (let j = 0; j < aeiou.length; j++) {
+    shortest = shortestAllVowels.length
+    test = aeiou[j].length
+    if (test < shortest)  {
+        shortestAllVowels = aeiou[j]
+    }}
+
+console.log(shortestAllVowels)
+//console.log("All words containing the vowels alphabetically are " + aeiou_Alph)

@@ -1,5 +1,5 @@
 # Program to create a list for all of the words with no vowel and not even a Y
-
+#currently getting hte wrong shortest word with all vowels
 # importing the word list
 sow_pods = open("/home/evergreen/UnderDogsAssignments/sowpods")
 
