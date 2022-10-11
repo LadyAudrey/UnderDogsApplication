@@ -1,4 +1,4 @@
-# Program to create a list for all of the words with no vowel and not even a Y
+# Program to create a list for all of the words with all the vowels
 #currently getting hte wrong shortest word with all vowels
 # importing the word list
 sow_pods = open("/home/evergreen/UnderDogsAssignments/sowpods")
@@ -11,7 +11,7 @@ for line in sow_pods:
     words.append(line.strip())
 
 for w in words:
-    if ("A" in w) and ("E" in w) and ("I" in w) and ("O" in w)and ("U" in w) and ("Y" in w):
+    if ("A" in w) and ("E" in w) and ("I" in w) and ("O" in w)and ("U" in w):
         vowels.append(w)
 
 print('All of the words that have  vowels, including Y are ' + str(vowels))

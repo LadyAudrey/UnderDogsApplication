@@ -19,7 +19,7 @@ for(let i = 0; i < words.length; i++) {
     if (words[i].includes("A") && words[i].includes("E") && words[i].includes("I") && words[i].includes("O") && words[i].includes("U")) {
         aeiou.push(words[i])}}
 
-console.log("All the words all the vowels are" + aeiou)
+console.log("All the words that have all 5 vowels are" + aeiou)
 
 for(let j = 0; j < aeiou.length; j++) {
     let a = (aeiou[j].indexOf('A'));
@@ -47,5 +47,5 @@ for (let j = 0; j < aeiou.length; j++) {
         shortestAllVowels = aeiou[j]
     }}
 
-console.log(shortestAllVowels)
-//console.log("All words containing the vowels alphabetically are " + aeiou_Alph)
+console.log("All words containing the vowels alphabetically are " + aeiou_Alph)
+console.log("The shortest word with all the vowels is " + shortestAllVowels)
