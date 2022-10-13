@@ -12,23 +12,32 @@ const readFileLines = filename =>
 // Calling the readFiles function with file name
 let words = readFileLines('/home/evergreen/UnderDogsAssignments/sowpods');
 let palindromes = []
-let longestPalindrome = ['AA']
+let longestPalindrome = "AA";
 let howLong = longestPalindrome.length
-console.log(howLong)
+console.log(words)
 
 // Cycle through words and find all the palindromes by comparing last letter for first letters
 for (let i = 0; i < words.length - 2; i++) {
     let reverseWord = words[i].split('').reverse().join('');
     if (words[i] === reverseWord) {
-        palindromes.push(words[i])
-    }}
+        if (typeof(words[i]) == String ) {
+            palindromes.push(words[i])
+            console.log(typeof(palindromes))
+        }
+    }
+}
 
-// // Find the longest index in palindrome
-for (let j = 0; j < words.length; j++) {
-    if (palindromes[j].length > howLong) {
-        let longestPalindrome = palindromes[j];
-        console.log(longestPalindrome)
-    }}
+console.log("this is the type of palindromes " + typeof(palindromes))
 
-console.log("All the words that are palindromes are " + palindromes)
+// // // Find the longest index in palindrome
+// for (let j = 0; j < words.length; j++) {
+//     console.log(palindromes[j])
+//     let long = palindromes[j].length
+//     if (long.length > howLong) {
+//         longestPalindrome = palindromes[j];
+//         console.log(longestPalindrome);
+//     }
+// }
+
+//console.log("All the words that are palindromes are " + palindromes)
 //console.log("The longest palindrome is " + longestPalindrome)

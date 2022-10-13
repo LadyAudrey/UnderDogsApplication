@@ -1,5 +1,4 @@
 // Program to find all the words with no A's or E's and are at least 15 letters long
-// can pring the list of all the vowels but not the shortest one yet
 // Importing the fs module
 let fs = require("fs")
 

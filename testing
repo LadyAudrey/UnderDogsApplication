@@ -1,0 +1,4 @@
+// program to test shiznet out
+
+aList = []
+console.log(typeof(aList[0]))

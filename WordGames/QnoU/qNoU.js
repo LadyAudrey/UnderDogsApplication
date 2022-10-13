@@ -10,10 +10,13 @@ const readFileLines = filename =>
 
 // Calling the readFiles function with file name
 let words = readFileLines('/home/evergreen/UnderDogsAssignments/sowpods');
+console.log(typeof(words))
 qNoUs = []
 
 for(let i = 0; i < words.length; i++) { 
     if (words[i].includes("Q") && !words[i].includes("U")) {
-        qNoUs.push(words[i]);}}
+        qNoUs.push(words[i]);
+    }
+}
 
 console.log("The words that contains Q's but not U's are " + qNoUs)

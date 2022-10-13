@@ -11,7 +11,6 @@ const readFileLines = filename =>
 
 // Calling the readFiles function with file name
 let words = readFileLines('/home/evergreen/UnderDogsAssignments/sowpods');
-console.log(words)
 
 // Cycle through words and if "type" is in the index, add it to type
 typeWord = []
