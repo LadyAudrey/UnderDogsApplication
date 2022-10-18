@@ -1,6 +1,5 @@
 # Program to create a list for all of the words that are palindromes
 # Then print the longest palindrome
-# not currently working; accidentally deleted from files
 # importing the word list
 from curses import A_ALTCHARSET
 
