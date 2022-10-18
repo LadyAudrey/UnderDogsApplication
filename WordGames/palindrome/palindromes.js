@@ -27,7 +27,7 @@ for (let i = 0; i < words.length - 1; i++) {
 // Find the longest index in palindrome
 for (let j = 0; j < words.length; j++) {
     let pIndex = String(palindromes[j])
-        howLong = longestPalindrome.length;
+        //howLong = longestPalindrome.length;
         if (pIndex.length > howLong) {
             longestPalindrome = pIndex;
         }
