@@ -1,4 +1,8 @@
-// Program to find all the words with no A's or E's and are at least 15 letters long
+// Program to find all the words
+// that have all the vowels
+// a list of words that have all the vowels in alphabetical order
+// what the longest word with all the vowels
+
 // Importing the fs module
 let fs = require("fs")
 
