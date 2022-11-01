@@ -3,16 +3,16 @@
 # importing the word list
 sow_pods = open("/home/evergreen/UnderDogsAssignments/sowpods")
 
+# Go through each word in the file and add it to the list, words
+
+for line in sow_pods:
+    words.append(line.strip())
+    
 # creating lists; one for the words, one for all the words that have B and X's
 # and one for all words that have B and X, less than 5
 words = []
 bx = []
 bx5 = []
-
-# Go through each word in the file and add it to the list, words
-
-for line in sow_pods:
-    words.append(line.strip())
 
 # go through words, see if B and X are in it, append to bx, then cycle through and add any <5 to bx5
 for w in words:
