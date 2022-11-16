@@ -27,4 +27,4 @@ for country in countries_list:
     if "u" in lower_case and "e" not in lower_case and "i" not in lower_case and "o" not in lower_case and not "a" in lower_case and "y" not in lower_case:
         one_vowel.append(country)
 
-print("All the countries who's name contains one vowel are " + str(one_vowel))
+print("All the countries who's name contains exclusively one vowel are " + str(one_vowel))

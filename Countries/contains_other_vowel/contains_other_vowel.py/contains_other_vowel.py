@@ -10,11 +10,18 @@ countries = open("/home/evergreen/UnderDogsAssignments/Countries/countries.txt")
 countries_list = []
 for line in countries:
     countries_list.append(line.strip())
+contains_country = {}
 
-#cycle through the list and compare each index to another index, add to contains_country as appropriate
-for a in countries_list:
-    small_a = a.lower()
-    for b in countries_list:
-        small_b = b.lower()
-        if small_b include small_a :
-    
+# add to contains_country as appropriate
+for country in countries_list:
+    # print("line 17" + str(country))
+    lowercase_country = country.lower()
+    for comparison_country in countries_list:
+        lower_case_comparison_country = comparison_country.lower()
+        if lower_case_comparison_country == lowercase_country:
+            continue
+        elif lower_case_comparison_country in lowercase_country:
+            contains_country.update({lowercase_country:lower_case_comparison_country})
+
+print(contains_country)
+            
