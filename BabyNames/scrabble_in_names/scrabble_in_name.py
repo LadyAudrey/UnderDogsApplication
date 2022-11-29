@@ -3,7 +3,7 @@
 # importing the country list
 names = open("/home/evergreen/UnderDogsAssignments/BabyNames/baby_names_2020_short.txt")
 
-#turning countries.doc into an array
+#turning names.doc into an array
 names2020 = []
 for line in names:
     names2020.append(line.strip())

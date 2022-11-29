@@ -13,5 +13,5 @@ countries_united = []
 for country in countries_list:
     if "United" in country:
         countries_united.append(country)
-
-print(countries_united)
+        
+print("The countries' who's names contain 'United' are " + str(countries_united))

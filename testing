@@ -1,4 +1,12 @@
 // program to test shiznet out
 
-aList = []
-console.log(typeof(aList[0]))
+//I want to use array.forEach() to iterate through arrays
+// explore map(func) to iterate through arrays
+//arrow functions
+//difference between function types
+// what is then
+// what is this
+//the difference between nvm or npm
+
+listA = [333, 444, 888, 999];
+listB = ["AAA", "BBB", "CCC", "DDD"]

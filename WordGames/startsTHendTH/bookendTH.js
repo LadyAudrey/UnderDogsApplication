@@ -1,4 +1,5 @@
-// Program to find all the words containing "ghtly""
+// Program to find all the words that begin and end with TH
+
 // Importing the fs module
 let fs = require("fs")
 
@@ -10,10 +11,7 @@ const readFileLines = filename =>
 
 // Calling the readFiles function with file name
 let words = readFileLines('/home/evergreen/UnderDogsAssignments/sowpods');
-ghtly = []
 
-for(let i = 0; i < words.length; i++) { 
-    if (words[i].includes("GHTLY")) {
-        ghtly.push(words[i]);
-    }}
-console.log("All the words containing ghtly are " + ghtly)
+words.forEach(word => {
+    if 
+});

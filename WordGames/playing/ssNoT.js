@@ -1,4 +1,5 @@
-// Program to find all the words containing "ghtly""
+// Program to find all the words that contain BAT and no E and less than 5 letters long
+
 // Importing the fs module
 let fs = require("fs")
 
@@ -10,10 +11,10 @@ const readFileLines = filename =>
 
 // Calling the readFiles function with file name
 let words = readFileLines('/home/evergreen/UnderDogsAssignments/sowpods');
-ghtly = []
-
-for(let i = 0; i < words.length; i++) { 
-    if (words[i].includes("GHTLY")) {
-        ghtly.push(words[i]);
-    }}
-console.log("All the words containing ghtly are " + ghtly)
+let = ssNot = []
+words.forEach(word => {
+    if (word.includes("SS") && !word.includes("T") && word.includes("Z")) {
+        ssNot.push(word)
+    }
+})
+console.log(ssNot);
