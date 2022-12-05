@@ -10,7 +10,7 @@ const readFileLines = filename =>
 
 // Calling the readFiles function with file name
 let words = readFileLines('/home/evergreen/UnderDogsAssignments/sowpods');
-console.log(typeof(words))
+
 qNoUs = []
 
 for(let i = 0; i < words.length; i++) { 
@@ -19,4 +19,4 @@ for(let i = 0; i < words.length; i++) {
     }
 }
 
-console.log("The words that contains Q's but not U's are " + qNoUs)
+console.log("The words that contain Q's but not U's are " + qNoUs)

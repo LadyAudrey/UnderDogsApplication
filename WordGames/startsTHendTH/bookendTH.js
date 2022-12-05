@@ -12,6 +12,11 @@ const readFileLines = filename =>
 // Calling the readFiles function with file name
 let words = readFileLines('/home/evergreen/UnderDogsAssignments/sowpods');
 
-words.forEach(word => {
-    if 
-});
+const bookendsTH = []
+for (var i=0; i < words.length; i++) {
+    if (words[i].slice(0, 2) == "TH" && words[i].slice(-2) == "TH") {
+        bookendsTH.push(words[i]);
+    }
+}
+
+console.log(bookendsTH)

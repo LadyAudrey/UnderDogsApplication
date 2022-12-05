@@ -22,4 +22,4 @@ for(let i = 0; i < letters.length; i++) {
             continue
         }}}
 
-console.log("Letters that are not consecutively are " + letters)
+console.log("Letters that are not consecutively in any words are " + letters)

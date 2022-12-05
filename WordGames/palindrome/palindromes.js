@@ -20,17 +20,12 @@ console.log("line 17 " + Number.isInteger(howLong))
 for (let i = 0; i < words.length - 1; i++) {
     let reverseWord = words[i].split('').reverse().join('');
     if (words[i] == reverseWord) {
-        palindromes.push(words[i])
-    }
-}
-
-// Find the longest index in palindrome
-for (let j = 0; j < words.length; j++) {
-    let pIndex = String(palindromes[j])
-        //howLong = longestPalindrome.length;
-        if (pIndex.length > howLong) {
-            longestPalindrome = pIndex;
+        palindromes.push(words[i]);
+        if (words[i].length > howLong) {
+            longestPalindrome = words[i];
+            howLong = longestPalindrome.length
         }
+    }
 }
 
 console.log("All the words that are palindromes are " + palindromes)

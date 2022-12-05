@@ -13,7 +13,9 @@ const readFileLines = filename =>
 let countries = readFileLines('/home/evergreen/UnderDogsAssignments/Countries/countries.txt');
 var oneVowel = []
 for (let j = 0; j < countries.length; j++) {
-   if ((countries[j].includes("A")) || (countries[j].includes("E")) || (countries[j].includes("I")) || (countries[j].includes("O"))) || (countries[j].includes("U") || (countries[j].includes("Y"))) {
+   let country = countries[j].toUpperCase();
+   console.log(country)
+   if ((country.includes("A")) || (country.includes("E")) || (country.includes("I")) || (country.includes("O")) || (country.includes("U")) || (country.includes("Y"))) {
       oneVowel.push(countries[j]);
    }
 }

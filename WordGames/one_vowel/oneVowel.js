@@ -20,7 +20,7 @@ const onlyO = [];
 const onlyU = [];
 const onlyY = [];
 
-Classic For Loop with If and else if statements
+//Classic For Loop with If and else if statements
 for (var i=0; i<words.length; i++) {
     if (words[i].includes("A") && !words[i].includes("E") && !words[i].includes("I") && !words[i].includes("O") && !words[i].includes("U") && !words[i].includes("Y")) {
             onlyA.push(words[i]);
