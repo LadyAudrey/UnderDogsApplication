@@ -8,5 +8,64 @@
 // what is this
 //the difference between nvm or npm
 
-listA = [333, 444, 888, 999];
-listB = ["AAA", "BBB", "CCC", "DDD"]
+// // Importing the fs module
+// const { count } = require("console");
+// let fs = require("fs")
+
+// // Intitializing the readFileLines with the file
+// const readFileLines = filename =>
+//    fs.readFileSync(filename)
+//    .toString('UTF8')
+//    .split('\n');
+
+// // Calling the readFiles function with file name
+// let countries = readFileLines('/home/evergreen/UnderDogsAssignments/Countries/countries.txt');
+
+
+// // const listA = [333, 444, 888, 999];
+// // const listB = ["AAA", "BBB", "CCC", "DDD"]
+
+// // let  aString  = "A String, cool";
+// const vowels = ["A", "a", "E", "e", "I", "i", "O", "o", "U", "u", "Y", "y"]
+
+// const  bookendVowels = []
+// for (var i = 0; i < countries.length-1; i++) {
+//     for (var j = 0; j < vowels.length-1; j++) {
+//         console.log(countries[i].slice(-1) + " line 34")
+//         console.log(vowels[j] + " line 35")
+//         console.log(countries[i])
+//         if (countries[i].slice(0, -1) == vowels[j]) {
+//             console.log("it's working at line 35")
+//             bookendVowels.push(countries[i]);
+//         }
+//     }
+// }
+
+// console.log(bookendVowels)
+
+const nestedArrays = [[1, 2, 3], [0, 0, 0,], [-5, -6, -12], [0], [36, 6, 535]];
+
+const addedInnerArray = [];
+
+function addArrays (x) {
+    for (let i = 0; i < x.length; i++) {
+        let sum = 0;
+        for (let j = 0; j < x[i].length; j++) {
+            sum = sum + x[i][j];
+            console.log(x[i][j], sum)
+        }
+        addedInnerArray.push(sum + " line 57")
+    }
+}
+
+console.log(addArrays(nestedArrays))
+
+// difference between == and ===
+// Suggested to start with === as default and then move to == if a case reason
+
+// const number1 = "1";
+// const int1 = 1;
+// const number2 = "2";
+
+// console.log(number1 == int1)
+
