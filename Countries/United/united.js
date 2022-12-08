@@ -11,11 +11,13 @@ const readFileLines = filename =>
 
 // Calling the readFiles function with file name
 let countries = readFileLines('/home/evergreen/UnderDogsAssignments/Countries/countries.txt');
-console.log(countries)
-var countriesUnited = []
 
-for(let i = 0; i < countries.length; i++) { 
-   if (countries[i].includes("United")) {
-       countriesUnited.push(countries[i]);
-   }}
-console.log("All the countries containing United are " + countriesUnited)
+const containsOtherCountry = [];
+for (var i = 0; i < countries.length -1; i++) {
+   let upperCaseCountry = countries[i].toUpperCase();
+   if (upperCaseCountry.includes("UNITED")) {
+      containsOtherCountry.push(countries[i]);
+   }
+}
+
+console.log(containsOtherCountry)
