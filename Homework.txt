@@ -1,4 +1,8 @@
 look up fs, this, sets
-Finish Dessert
-Finish Fx powerpoint
 research map and math
+explore check duplicate
+
+// Notes for future self
+// Make sure JS syntax is accurate
+// Make sure all () {} and [] are paired and appropriate
+// Make sure if I'm using toUpperCase etc that it is contextually appropriate
