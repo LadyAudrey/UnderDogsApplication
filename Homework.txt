@@ -1,8 +1,10 @@
-look up fs, this, sets
+look up fs, this, sets, check duplicate
 research map and math
-explore check duplicate
+Wander through Web tools on Chrome
+Use getElementbyid, getElementby
 
-// Notes for future self
-// Make sure JS syntax is accurate
-// Make sure all () {} and [] are paired and appropriate
-// Make sure if I'm using toUpperCase etc that it is contextually appropriate
+// // Notes for future self
+// Make sure 
+///// JS syntax is accurate
+///// All () {} and [] are paired and appropriate
+///// if I'm using toUpperCase etc that it is contextually applicable
