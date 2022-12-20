@@ -1,7 +1,9 @@
 look up fs, this, sets, check duplicate
 research map and math
-Wander through Web tools on Chrome
 Use getElementbyid, getElementby
+Review 0 indexing (<= vs -1 vs .length)
+competency with literal string
+
 
 // // Notes for future self
 // Make sure 

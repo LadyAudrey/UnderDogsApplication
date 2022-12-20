@@ -4,30 +4,37 @@ let fs = require("fs")
 
 // Intitializing the readFileLines with the file
 
-const readFileLines = function (filename) {
-    let file = fs.readFileSync(filename);
-    let fileAsString = file.toString();
-    const formattedString = fileAsString.split('\n');
-    // split('\n');
-    console.log(formattedString);
-};
-readFileLines('/home/evergreen/UnderDogsAssignments/sowpods')
-
-// const readFileLines = filename =>
-//    fs.readFileSync(filename)
-//    .toString('UTF8');
-//    .split('\n');
+const readFileLines = filename =>
+fs.readFileSync(filename).toString('UTF8').split('\n');
 
 // Calling the readFiles function with file name
 let words = readFileLines('/home/evergreen/UnderDogsAssignments/sowpods');
-// console.log(words)
 
-// let bxLessThan5 = [];
 
-//     for(let i = 0; i < words.length; i++) { 
-//         if (words[i].includes("B") && words[i].includes("X") && words[i].length < 5) {
-//             bxLessThan5.push(words[i]);
-//         }
+let bxLessThan5 = [];
+
+// for(let i = 0; i < words.length; i++) { 
+//     if (words[i].includes("B") && words[i].includes("X") && words[i].length < 5) {
+//         bxLessThan5.push(words[i]);
 //     }
+// }
 
-// console.log("All the words that contain B and X and < 5 letters long are " + bxLessThan5)
+// // console.log("All the words that contain B and X and < 5 letters long are " + bxLessThan5)
+
+// refactoring to use Set
+const bX = new Set();
+
+for (var i = 0; i < words.length - 1; i++) {
+    // the simple thing would be to put <5 in the conditional, but I want set practice
+    if (words[i].includes("B") && words[i].includes("X")) {
+        bX.add(words[i]);
+    }
+}
+
+for (var j = 0; j < bX.length -1; j++) {
+    if (bX[j].length < 5) {
+        bxLessThan5.push(bX[j]);
+    }
+}
+
+console.log(bxLessThan5)

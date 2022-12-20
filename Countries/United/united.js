@@ -12,12 +12,20 @@ const readFileLines = filename =>
 // Calling the readFiles function with file name
 let countries = readFileLines('/home/evergreen/UnderDogsAssignments/Countries/countries.txt');
 
-const containsOtherCountry = [];
+// const united = [];
+// for (var i = 0; i < countries.length -1; i++) {
+//    if (countries[i].includes("United")) {
+//       united.push(countries[i]);
+//    }
+// }
+
+// console.log(united)
+
+const states = [];
 for (var i = 0; i < countries.length -1; i++) {
-   let upperCaseCountry = countries[i].toUpperCase();
-   if (upperCaseCountry.includes("UNITED")) {
-      containsOtherCountry.push(countries[i]);
+   if (countries[i].includes("States")) {
+      states.push(countries[i]);
    }
 }
 
-console.log(containsOtherCountry)
+console.log(states)
