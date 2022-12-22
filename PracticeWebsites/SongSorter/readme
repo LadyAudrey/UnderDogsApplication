@@ -1,0 +1,6 @@
+Program designed to let someone chose which albums (from a stored object) to compare and then order the songs from favorite to least favorite
+
+TDL:
+attach buttons to logic in JS
+create JS logic for buttons to connect to songs, rotate through them, increment variables and eventually print out data
+Prettify buttons and page
