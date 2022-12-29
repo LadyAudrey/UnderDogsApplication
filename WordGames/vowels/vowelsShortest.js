@@ -13,15 +13,19 @@ const readFileLines = filename =>
 // Calling the readFiles function with file name
 let words = readFileLines('/home/evergreen/UnderDogsAssignments/sowpods');
 
-const vowels = [];
-let shortest = "AMARYLLIDACEOUS";
+const vowels = ["A", "E", "I", "O", "U", "Y"];
+let allVowels = true;
 
 for (var i=0; i < words.length - 1; i++) {
-    if (words[i].includes("A") && words[i].includes("E") && words[i].includes("I") && words[i].includes("O") &&words[i].includes("U") &&words[i].includes("Y")) {
-        vowels.push(words[i]);
-        if (words[i].length < shortest.length) {
-            shortest = words[i];
+    let word = words[i];
+    for (var j = 0; j < vowels.length; j++) {
+        let vowel = vowels[j];
+        if (!word.includes(vowel)) {
+            allVowels = false;
+            console.log(word);
+        }
+        if (allVowels === true) {
+            console.log(word);
         }
     }
 }
-console.log(shortest);

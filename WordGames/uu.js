@@ -10,12 +10,20 @@ const readFileLines = filename =>
 
 // Calling the readFiles function with file name
 let words = readFileLines('/home/evergreen/UnderDogsAssignments/sowpods');
-uu = []
+let uu = new Set();
 
-for(let i = 0; i < words.length; i++) { 
-    if (words[i].includes("UU")) {
-        uu.push(words[i]);
+// for(let i = 0; i < words.length; i++) { 
+//     if (words[i].includes("UU")) {
+//         uu.add(words[i]);
+//     }
+
+// }
+// console.log(uu)
+
+words.forEach(element => {
+    if (element.includes("UU")) {
+        uu.add(element);
     }
+});
 
-}
-console.log("All the words with 'uu' are " + uu)
+console.log(uu);

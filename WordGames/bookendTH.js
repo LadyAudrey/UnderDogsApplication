@@ -16,7 +16,7 @@ let words = readFileLines('/home/evergreen/UnderDogsAssignments/sowpods');
 let bookendTH = [];
 
 for (let i = 0; i < words.length; i++) {
-    if (words[i].startsWith("TH") && words[i].endsWith("TH")) {
+    if (words[i].substring(0, 2) == ("TH") && words[i].substring(words[i].length - 2) == ("TH")) {
         bookendTH.push(words[i]);
     }
 }

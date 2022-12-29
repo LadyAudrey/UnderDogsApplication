@@ -1,5 +1,29 @@
 body {
     background-color: #005599;
     color: #efabef;
-
 }
+
+.parent {
+    background-color: blueviolet;
+    font-size: 300px;
+}
+
+#one {
+    background-color: black;
+}
+
+#two {
+    background-color: darkcyan;
+}
+
+#three {
+    background-color: darkslategrey;
+}
+/*
+Play with Position- absolute, sticky
+stretch goal:
+elements
+absolute position w/in relative
+relative position w/in absolute
+next time-work on background images etc
+*/

@@ -1,0 +1,52 @@
+header {
+    font-size: 100px;
+    text-align: center;
+}
+
+body {
+    background-color: darkblue;
+    color: #D0B8A8;
+}
+
+p {
+    text-align: center;
+    border: 3px solid whitesmoke;
+    border-radius: 20px;
+    border-top-left-radius: 10px;
+    font-size: 40px;
+}
+
+.songOptions {
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+}
+
+#songA, #songB {
+    color: #D0B8A8;
+}
+
+.songOptions > button {
+    display: block;
+    padding-right: 25%;
+    padding-left: 25%;
+    border-radius: 10px;
+    background-color: darkmagenta;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.altChoices {
+    text-align: center;
+    padding: 16px;
+}
+
+/*
+Play with Position- absolute, sticky
+stretch goal:
+elements
+absolute position w/in relative
+relative position w/in absolute
+next time-work on background images etc
+*/

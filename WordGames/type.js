@@ -13,10 +13,10 @@ const readFileLines = filename =>
 let words = readFileLines('/home/evergreen/UnderDogsAssignments/sowpods');
 
 // Cycle through words and if "type" is in the index, add it to type
-typeWord = []
+const typeWord = new Set;
 
 for(let i = 0; i < words.length; i++) { 
     if (words[i].includes("TYPE")) {
-        typeWord.push(words[i]);}}
+        typeWord.add(words[i]);}}
 
-console.log("All the words containing 'type' are " + typeWord)
+console.log(typeWord)
