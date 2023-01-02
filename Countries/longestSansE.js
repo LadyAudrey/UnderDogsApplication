@@ -14,14 +14,16 @@ const sortingFunction = function (a, b) {
 
 // a function to find countries without specified letters, and then find the longest ones
 const sansForbiddenLongest = function(notTheseLetters, array) {
-    // creating a variable to contain the specified undesirable letters
-    let undesirable = new Set(notTheseLetters);
+    // creating a variable to contain the specified undesirable letters\
+    let notTheseLettersString = notTheseLetters.toString().toUpperCase();
+    let notTheseLettersArray = Array.from(notTheseLettersString);
+    let undesirable = new Set(notTheseLettersArray);
     // looping through array, selecting indexes that are sans undesirable letters
     // using boolean logic to add appropriate index to cleanOfForbiddenLetters
     for (let i = 0; i < array.length; i++) {
         let notForbidden = true;
-        const country = array[i];
-        for (let j = 0; j < country.length; j++) {
+        let country = array[i].toUpperCase();
+        for(let j = 0; j < country.length; j++) {
             const letter = country[j];
             if (undesirable.has(letter)) {
                 notForbidden = false;
@@ -29,9 +31,10 @@ const sansForbiddenLongest = function(notTheseLetters, array) {
         }
         if (notForbidden === true) {
         cleanOfForbiddenLetters.push(array[i]);
+        console.log(cleanOfForbiddenLetters)
     }
-    // sorting potential solutions array
-    // finding the longest ones by comparison and adding them to Solutions array
+    // // sorting potential solutions array
+    // // finding the longest ones by comparison and adding them to Solutions array
     } const sortedCleanOfForbiddenLetters = cleanOfForbiddenLetters.sort(sortingFunction);
     for (let i = 0; i < sortedCleanOfForbiddenLetters.length; i++) {
         let country = sortedCleanOfForbiddenLetters[i];
@@ -39,11 +42,12 @@ const sansForbiddenLongest = function(notTheseLetters, array) {
             solutionFoundSet.add(country);
         }
     }
+    console.log(solutionFoundSet)
     return solutionFoundSet
 }
 
 // the first argument is the undesirable letters and the second is the array we're passing through
-console.log(sansForbiddenLongest(["E", "e", "A", "a"], countriesArr));
+console.log(sansForbiddenLongest(["U", "T"], countriesArr));
 
 // const sansEArr = [];
 // // find all country names sans E

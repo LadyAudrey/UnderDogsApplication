@@ -7,12 +7,6 @@
 
 // practicing replace
 
-let aString = "Hi! I'm a String";
-aString.replace("H", "I");
-
-console.log(aString);
-
-
 /////////////////////////////////////////////////////////////
 ////// Practicing functions
 // // normal function
@@ -36,3 +30,51 @@ console.log(aString);
 // const variable = (a, b) => {return a + b;};
 
 // console.log(variable(1, 2))
+
+///////// Learning how to call different pieces of a tree
+
+const albums = [
+    {
+        albumName: "Reputation",
+        likes: 0,
+        songs: [
+            {
+                name: "Ready for It",
+                likes: 0,
+            },
+            {
+                name: "Dress",
+                likes: 0,
+        }],
+    },
+    {
+        albumName: "Midnights",
+        likes: 0,
+        songs: [
+            {
+                name: "Lavendar Haze",
+                likes: 0,
+            },
+            {
+                name: "Maroon",
+                likes: 0,
+            }
+        ]
+    }
+ ]
+
+let songList = [];
+
+// console.log(albums[1].songs[0].name)
+// const songNames = Array.from(albums[0].songs).map(song => song.name)
+console.log(songNames)
+
+// loop through the  albums and put the song names into an Array
+const makingArraysFromSongsAndAlbums = function () {
+    for (let i = 0; i < albums.length; i++) {
+        const songs = array[i];
+        console.log(songs)
+        songList.push(element);
+        console.log(typeof songList)
+    }
+}

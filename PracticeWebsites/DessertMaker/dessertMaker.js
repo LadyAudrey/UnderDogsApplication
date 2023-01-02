@@ -43,5 +43,4 @@ button1.onclick = function () {
 button1.style.padding="20px";
 
 //Might need Math Fx's (math.floor/round/ceil/random)
-//Math.ceil(x)
-
+//Math.ceil(x)y
