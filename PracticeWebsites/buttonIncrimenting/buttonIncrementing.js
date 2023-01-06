@@ -6,6 +6,8 @@ let number = 50;
 let opacity = 0.50;
 let green = 175;
 let color = `rgba(76, ${green}, 80, ${opacity})`;
+// let newColor = "rgba("76" + "green" + "80" + "opacity";
+// Play more in the browser console and node
 
 
 const buttonAdd = document.getElementById("buttonAdd");

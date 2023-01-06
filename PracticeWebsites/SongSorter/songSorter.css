@@ -4,15 +4,24 @@ header {
 }
 
 body {
-    background-color: darkblue;
+    background-color: black;
     color: #D0B8A8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-p {
-    text-align: center;
-    border: 3px solid whitesmoke;
-    border-radius: 20px;
-    border-top-left-radius: 10px;
+#albumCovers {
+    display:flex;
+    justify-content: space-around;
+}
+
+#albumCovers > img {
+    width: 8%;
+    height: 8%;
+}
+
+#tagline {
     font-size: 40px;
 }
 
@@ -20,7 +29,6 @@ p {
     width: 1000px;
     margin: auto;
     text-align: center;
-    padding: 15px;
 }
 
 #songA, #songB {
@@ -28,7 +36,6 @@ p {
 }
 
 .songOptions > button {
-    display: block;
     padding-right: 25%;
     padding-left: 25%;
     border-radius: 10px;
@@ -43,10 +50,10 @@ p {
 }
 
 /*
-Play with Position- absolute, sticky
-stretch goal:
-elements
-absolute position w/in relative
-relative position w/in absolute
-next time-work on background images etc
+Primary goal:
+Box model, how to utilize it inside Dev tools
+Look at all basic tags and their default display properties
+Colors- use hex codes, and their rgba
+Stretch goal:
+Build a footer for Song Sorter footer that stays in place
 */

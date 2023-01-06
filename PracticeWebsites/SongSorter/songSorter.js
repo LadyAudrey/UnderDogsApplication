@@ -1,15 +1,38 @@
 // Program to create a song Sorter website for TY :)
-window.onload = function () {
-    // ////// Button Logic Happiness
-    const songA = document.getElementById("songA");
-    console.log(songA)
-    songA.onclick = function () {
-        const text = document.createElement("h2");
-        let randomSongA = "Reputation";
-        text.textContent = randomSongA;
-        document.body.appendChild(text);
-    }
-}
+const songArray = ["Reputation", "Lavendar Haze", "Lover", "On a String"];
+
+//////// Button Logic Happiness
+const songA = document.getElementById("songA");
+const songB = document.getElementById("songB");
+const both = document.getElementById("both");
+const neither = document.getElementById("neither");
+
+// function to listn fo click and update text in the button
+const newSongs = document.addEventListener('click', function () {
+    let mathingA = Math.random();
+    let randomSongA = Math.ceil(mathingA * songArray.length - 1);
+    let mathingB = Math.random();
+    let randomSongB = Math.ceil(mathingB * songArray.length - 1);
+    songA.textContent = songArray[randomSongA];
+    songB.textContent = songArray[randomSongB];
+})
+
+//songA.textContent = 'hello'
+
+document.getElementById('songA').addEventListener('click', function() {
+    let mathing = Math.random();
+    let randomSong = Math.ceil(mathing * songArray.length - 1);
+    const text = document.createElement("songA");
+    this.textContent = songArray[randomSong];
+  });
+// const songB = document.getElementById("songB");
+// console.log(songB)
+// songB.onclick = function () {
+//     const text = document.createElement("h3");
+//     let randomSongB = "Midnights";
+//     text.textContent = randomSongB;
+//     document.body.appendChild(text);
+// }
 
 // has variables to increment, song names, links to spotify and youtube
 
@@ -43,16 +66,19 @@ const albums = [
    }
 ]
 
-// console.log(albums.songs.name)
+// console.log(albums[1].songs.)
+// // Loop through all albums
+// for(let i = 0; i < albums.length; i++) {
+//   const album = albums[i];
+//   console.log(album)
+  // Loop through all songs in the album
+//   for(let j = 0; j < album.songs.length; j++) {
+//     const song = album.songs[j];
+//     const songName = song.name;
+//     songs.push(songName);
+//   }
+// }
 
 // at every shuffle, push to an array of songs, documenting songs that have been compared
 // does this couple already exist in compared songs array? [["songA", "songB"]] 
 // let comparedSongs =[];
-
-// // const el = document.querySelector("div.user-panel.main input[name='login']");
-// const songOptions = document.querySelector(".songOptions");
-// let firstSong = songOptions.querySelectorAll("button");
-// console.log(songOptions);
-// console.log(firstSong);
-// // songA.onclick = function () {
-// // }
