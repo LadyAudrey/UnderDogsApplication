@@ -12,30 +12,25 @@
     <div id="albumCovers">
         <img src="/home/evergreen/UnderDogsAssignments/PracticeWebsites/SongSorter/AlbumArt/Debut.png" />
         <img src="/home/evergreen/UnderDogsAssignments/PracticeWebsites/SongSorter/AlbumArt/FearlessOG.jpg" />
-        <img src="/home/evergreen/UnderDogsAssignments/PracticeWebsites/SongSorter/AlbumArt/FearlessTV.jpg" />
+        <img src="/home/evergreen/UnderDogsAssignments/PracticeWebsites/SongSorter/AlbumArt/FearlessTV.png" />
         <img src="/home/evergreen/UnderDogsAssignments/PracticeWebsites/SongSorter/AlbumArt/SpeakNowOG.jpeg" />
         <img src="/home/evergreen/UnderDogsAssignments/PracticeWebsites/SongSorter/AlbumArt/RedOG.png" />
-        <img src="/home/evergreen/UnderDogsAssignments/PracticeWebsites/SongSorter/AlbumArt/REDTV.jpg" />
+        <img src="/home/evergreen/UnderDogsAssignments/PracticeWebsites/SongSorter/AlbumArt/RED_TV.png" />
         <img src="/home/evergreen/UnderDogsAssignments/PracticeWebsites/SongSorter/AlbumArt/1989OG.jpg" />
         <img src="/home/evergreen/UnderDogsAssignments/PracticeWebsites/SongSorter/AlbumArt/1989TV.jpg" />
         <img src="/home/evergreen/UnderDogsAssignments/PracticeWebsites/SongSorter/AlbumArt/ReputationOG.png" />
         <img src="/home/evergreen/UnderDogsAssignments/PracticeWebsites/SongSorter/AlbumArt/Lover.png" />
         <img src="/home/evergreen/UnderDogsAssignments/PracticeWebsites/SongSorter/AlbumArt/Folklore.png" />
         <img src="/home/evergreen/UnderDogsAssignments/PracticeWebsites/SongSorter/AlbumArt/Evermore.png" />
-
-
-
-
-
     </div>
     <p id="tagline">The Swiftie Time Sink</p>
     <div class="songOptions">
-        <button id="songA">Song A</button>
-        <button id="songB">Song B</button>
+        <button id="songA" onclick="processClickChoice(this)">Song A</button>
+        <button id="songB" onclick="processClickChoice(this)">Song B</button>
     </div>
     <div class="altChoices">
-        <button id="both">I love both of them</button>
-        <button id="neither">I don't like either of them</button>
+        <button id="both" onclick="processClickChoice(this)">I love both of them</button>
+        <button id="nope" onclick="processClickChoice(this)">I don't like either of them</button>
         <p>Note: The more you use these buttons, the less accurate your results will be</p>
     </div>
     <script src="./songSorter.js"></script>

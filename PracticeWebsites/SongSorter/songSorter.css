@@ -4,8 +4,8 @@ header {
 }
 
 body {
-    background-color: black;
-    color: #D0B8A8;
+    background-color: #073d34;
+    color: #9c7ea7;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,14 +32,14 @@ body {
 }
 
 #songA, #songB {
-    color: #D0B8A8;
+    color: #310940;
 }
 
 .songOptions > button {
     padding-right: 25%;
     padding-left: 25%;
     border-radius: 10px;
-    background-color: darkmagenta;
+    background-color: #AC9349;
     font-size: 45px;
     font-weight: bold;
 }
@@ -56,4 +56,16 @@ Look at all basic tags and their default display properties
 Colors- use hex codes, and their rgba
 Stretch goal:
 Build a footer for Song Sorter footer that stays in place
+*/
+
+/*
+Color Palette:
+Yellow--
+---Light: FBEBBB; DarkLight: D0BA79; Medium: AC9349; LightDark: 8C8329; Dark: 604B0A;
+
+Purple--
+---Light: 9c7ea7; DarkLight: 7b538a; Medium: 613372; LightDark: 4C1E5D; Dark: 310940;
+
+Greene--
+---Light: 779498; DarkLight: 4D847b; Medium: 2e6d62; LightDark: 1a594e; Dark: 073d34;
 */

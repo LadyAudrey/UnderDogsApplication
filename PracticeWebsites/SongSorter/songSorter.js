@@ -1,83 +1,90 @@
 // Program to create a song Sorter website for TY :)
-const songArray = ["Reputation", "Lavendar Haze", "Lover", "On a String"];
+const songArray = [];
 
 //////// Button Logic Happiness
-const songA = document.getElementById("songA");
-const songB = document.getElementById("songB");
-const both = document.getElementById("both");
-const neither = document.getElementById("neither");
-
-// function to listn fo click and update text in the button
-const newSongs = document.addEventListener('click', function () {
-    let mathingA = Math.random();
-    let randomSongA = Math.ceil(mathingA * songArray.length - 1);
-    let mathingB = Math.random();
-    let randomSongB = Math.ceil(mathingB * songArray.length - 1);
-    songA.textContent = songArray[randomSongA];
-    songB.textContent = songArray[randomSongB];
-})
-
-//songA.textContent = 'hello'
-
-document.getElementById('songA').addEventListener('click', function() {
-    let mathing = Math.random();
-    let randomSong = Math.ceil(mathing * songArray.length - 1);
-    const text = document.createElement("songA");
-    this.textContent = songArray[randomSong];
-  });
+// const songA = document.getElementById("songA");
 // const songB = document.getElementById("songB");
-// console.log(songB)
-// songB.onclick = function () {
-//     const text = document.createElement("h3");
-//     let randomSongB = "Midnights";
-//     text.textContent = randomSongB;
-//     document.body.appendChild(text);
-// }
+// const both = document.getElementById("both");
+// const neither = document.getElementById("neither");
 
-// has variables to increment, song names, links to spotify and youtube
-
-const albums = [
+let albums = [
    {
        albumName: "Reputation",
-       likes: 0,
+       albumLikes: 0,
        songs: [
            {
                name: "Ready for It",
-               likes: 0,
+               songLikes: 0,
            },
            {
                name: "Dress",
-               likes: 0,
+               songLikes: 0,
        }],
    },
    {
        albumName: "Midnights",
-       likes: 0,
+       albumLikes: 0,
        songs: [
            {
                name: "Lavendar Haze",
-               likes: 0,
+               songLikes: 0,
            },
            {
                name: "Maroon",
-               likes: 0,
+               songLikes: 0,
            }
        ]
    }
 ]
 
-// console.log(albums[1].songs.)
-// // Loop through all albums
-// for(let i = 0; i < albums.length; i++) {
-//   const album = albums[i];
-//   console.log(album)
-  // Loop through all songs in the album
-//   for(let j = 0; j < album.songs.length; j++) {
-//     const song = album.songs[j];
-//     const songName = song.name;
-//     songs.push(songName);
-//   }
-// }
+console.log(albums[0].songs[0].songLikes)
+
+for(let album = 0; album < albums.length; album++){
+    for(let song = 0; song < albums[album].songs.length; song++) {
+        songArray.push(albums[album].songs[song].name);
+    }
+}
+
+// function to listen fo click and update text in the button
+function processClickChoice(element) {
+    // Pull textContent to update song and album counters accordingly
+    console.log(element.textContent)
+    // Creating random math to randomly draw 2 songs from songArray
+    let mathingA = Math.random();
+    let randomSongA = Math.ceil(mathingA * songArray.length - 1);
+    let mathingB = Math.random();
+    let randomSongB = Math.ceil(mathingB * songArray.length - 1);
+    while(randomSongA === randomSongB){
+        mathingA = Math.random();
+        randomSongA = Math.ceil(mathingA * songArray.length - 1);
+        mathingB = Math.random();
+        randomSongB = Math.ceil(mathingB * songArray.length - 1);
+    }
+    let button = element.id;
+    if (button === "songA") {
+        songA.textContent = songArray[randomSongA];
+        songB.textContent = songArray[randomSongB];
+        // incriment songA likes variables and update buttons text
+    } else if (button === "songB")  {
+        // incriment songB likes variables and update buttons text
+        songA.textContent = songArray[randomSongA];
+        songB.textContent = songArray[randomSongB];
+    } else if (button === "both") {
+        // incriment both likes variables and update buttons text
+        songA.textContent = songArray[randomSongA];
+        songB.textContent = songArray[randomSongB];
+    } else {
+        //do not incriment but update buttons text
+        songA.textContent = songArray[randomSongA];
+        songB.textContent = songArray[randomSongB];
+    }
+}
+
+// explaining how to call and increment variables in Albums
+// console.log(albums[0].albumName)
+// console.log(albums[0].songs[0].name)
+// albums[0].songs[0].likes += 1;
+// console.log(albums[0].songs[0].likes)
 
 // at every shuffle, push to an array of songs, documenting songs that have been compared
 // does this couple already exist in compared songs array? [["songA", "songB"]] 

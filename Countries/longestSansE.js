@@ -47,7 +47,7 @@ const sansForbiddenLongest = function(notTheseLetters, array) {
 }
 
 // the first argument is the undesirable letters and the second is the array we're passing through
-console.log(sansForbiddenLongest(["U", "T"], countriesArr));
+console.log(sansForbiddenLongest(["X", "A"], countriesArr));
 
 // const sansEArr = [];
 // // find all country names sans E
