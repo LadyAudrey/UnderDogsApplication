@@ -41,6 +41,20 @@ button1.onclick = function () {
 }
 
 button1.style.padding="20px";
-
+const doingIt = document.querySelector("doingit")
+document.body.style.backgroundColor="green";
 //Might need Math Fx's (math.floor/round/ceil/random)
 //Math.ceil(x)y
+
+function createMenuItem(name) {
+    let li = document.createElement('menu');
+    li.textContent = name;
+    return li;
+}
+// get the ul#menu
+const menu = document.querySelector('menu');
+
+// add menu item
+menu.appendChild(createMenuItem('Home'));
+menu.appendChild(createMenuItem('Services'));
+menu.appendChild(createMenuItem('About Us'));

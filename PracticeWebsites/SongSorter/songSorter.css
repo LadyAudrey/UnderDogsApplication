@@ -1,14 +1,16 @@
 header {
-    font-size: 100px;
+    font-size: 100%;
     text-align: center;
 }
 
-body {
-    background-color: #073d34;
+html, body {
+    background-color: #3f3002;
     color: #9c7ea7;
+    min-height:  100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: unset;
 }
 
 #albumCovers {
@@ -32,14 +34,14 @@ body {
 }
 
 #songA, #songB {
-    color: #310940;
+    color: #073d34;
 }
 
 .songOptions > button {
-    padding-right: 25%;
-    padding-left: 25%;
+    padding-right: 10%;
+    padding-left: 10%;
     border-radius: 10px;
-    background-color: #AC9349;
+    background-color: #9c7ea7;
     font-size: 45px;
     font-weight: bold;
 }
@@ -49,13 +51,27 @@ body {
     padding: 16px;
 }
 
+.footer {
+    background-color: #9c7ea7;
+    color: #073d34;
+    /* position: absolute; */
+    margin-top: auto;
+    padding: 1%;
+    flex: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+}
+
 /*
+look up rule spacing definitions/ usages
 Primary goal:
+Look up inherit, initiial, unset,  normal, revert and implement them
 Box model, how to utilize it inside Dev tools
 Look at all basic tags and their default display properties
-Colors- use hex codes, and their rgba
 Stretch goal:
-Build a footer for Song Sorter footer that stays in place
+Create a table using all the core table tags like <thead>, <tbody>, <th>, <tr> and <td>. You can put whatever data you would like in it. Learn how to construct tables and why the tags go where and then style it however you want. Have fun with it! Colors, borders, font styles, etc.
+white_check_mark
 */
 
 /*
@@ -63,9 +79,9 @@ Color Palette:
 Yellow--
 ---Light: FBEBBB; DarkLight: D0BA79; Medium: AC9349; LightDark: 8C8329; Dark: 604B0A;
 
-Purple--
+Purple--073d34
 ---Light: 9c7ea7; DarkLight: 7b538a; Medium: 613372; LightDark: 4C1E5D; Dark: 310940;
 
 Greene--
----Light: 779498; DarkLight: 4D847b; Medium: 2e6d62; LightDark: 1a594e; Dark: 073d34;
+---Light: 779498; DarkLight: 4D847b; Medium: 2e6d62; LightDark: 1a594e; Dark: ;
 */
