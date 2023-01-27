@@ -1,33 +1,41 @@
 body {
     background-color: #005599;
     color: #efabef;
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    font-size: 120px;
+
 }
 
-.parent {
-    background-color: blueviolet;
-    font-size: 300px;
-    display: inline-table;
-}
-
-#one {
+table {
     background-color: black;
-    display: inline-block;
+    border-color: aliceblue;
 }
 
-#two {
-    background-color: darkcyan;
-    display: initial;
+thead {
+    font-size: larger;
 }
 
-#three {
-    background-color: darkslategrey;
-    display: initial;
+td, th, tr{
+    padding: 10px 40px 10px 40px;
+    border: 10px;
+    margin: 10px;
 }
-/*
-Play with Position- absolute, sticky
-stretch goal:
-elements
-absolute position w/in relative
-relative position w/in absolute
-next time-work on background images etc
-*/
+/* nth-child, td-firstchild, */
+
+tr:last-child {
+    background-color: aqua;
+}
+
+tr:hover{
+    background-color: grey;
+}
+
+td {
+    border: groove 5px aliceblue;
+}
+
+#headings > * {
+    text-transform: uppercase;
+}

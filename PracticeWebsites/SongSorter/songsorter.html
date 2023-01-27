@@ -24,16 +24,69 @@
         <img src="/home/evergreen/UnderDogsAssignments/PracticeWebsites/SongSorter/AlbumArt/Evermore.png" />
     </div>
     <p id="tagline">The Swiftie Time Sink</p>
-    <div class="songOptions">
-        <button class="buttons" id="songA">Song A</button>
-        <button class="buttons" id="songB">Song B</button>
+    <div id = buttons>
+        <div class="songOptions">
+            <button id="songA">Song A</button>
+            <button id="songB">Song B</button>
+        </div>
+        <div class="altChoices">
+            <button id="both">I love both of them</button>
+        </div>
     </div>
-    <div class="altChoices">
-        <button class="buttons" id="both">I love both of them</button>
+    <h2></h2>
+    <table id="results">
+        <thead>
+          <tr>
+            <th>Song Name</th>
+            <th>Likes</th>
+          </tr>
+        </thead>
+        <tbody id="songData">
+        </tbody>
+    </table>
     </div>
+    <p id="debugInfo"></p>
     <footer class="footer">I'm a Taylor Swift Song Sorter site!
     </footer>
         <script src="./songSorter.js"></script>
 </body>
 </html>
 
+
+<!-- 
+    const data = [{Name:'Sydney', Day: 'Monday', Time: '10:00AM'},{Name:'New York', Day: 'Monday',Time: '11:00AM'},]; // any json data or array of objects
+
+const tableData = data.map(value => {
+  return (
+    `<tr>
+       <td>${value.Name}</td>
+       <td>${value.Day}</td>
+       <td>${value.Time}</td>
+    </tr>`
+  );
+}).join('');
+
+const tableBody = document.querySelector("#tableBody");
+tableBody.innerHTML = tableData;
+white_check_mark
+eyes
+raised_hands::skin-tone-3
+
+
+
+
+
+2:55
+<table border="2">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Tour</th>
+      <th scope="col">Day</th>
+      <th scope="col">Time</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody">
+                                    
+  </tbody>
+</table>
+ -->

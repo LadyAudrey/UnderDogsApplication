@@ -10,3 +10,6 @@ competency with literal string
 ///// JS syntax is accurate
 ///// All () {} and [] are paired and appropriate
 ///// if I'm using toUpperCase etc that it is contextually applicable
+
+Bradley-
+Read documentation

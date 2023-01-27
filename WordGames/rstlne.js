@@ -23,7 +23,6 @@ for (const word of words) {
    for (const letter of word) {
       if(!desiredLetters.has(letter)){
          validWord = false;
-         break;
       }
    }
    if(validWord){

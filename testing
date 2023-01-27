@@ -1,5 +1,38 @@
 // program to test shiznet out
 
+const isEven = function (x) {
+  if (x % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const testIsEven = function () {
+  if (isEven(2)) {
+    console.log("2 is even");
+  } else {
+    console.log("isEven(2) failed test");
+  }
+  if (isEven(3) === false) {
+    console.log("3 is odd");
+  } else {
+    console.log("isEven(3) failed test");
+  }
+  if (isEven(0)) {
+    console.log("0 is even");
+  } else {
+    console.log("isEven(0) failed test");
+  }
+  if (isEven(-1) === false) {
+    console.log("-1 is odd");
+  } else {
+    console.log("isEven(-1) failed test");
+  }
+};
+
+console.log(testIsEven());
+
 // explore map(func) to iterate through arrays
 // what is then
 // what is this
@@ -33,48 +66,49 @@
 
 ///////// Learning how to call different pieces of a tree
 
-const albums = [
-    {
-        albumName: "Reputation",
-        likes: 0,
-        songs: [
-            {
-                name: "Ready for It",
-                likes: 0,
-            },
-            {
-                name: "Dress",
-                likes: 0,
-        }],
-    },
-    {
-        albumName: "Midnights",
-        likes: 0,
-        songs: [
-            {
-                name: "Lavendar Haze",
-                likes: 0,
-            },
-            {
-                name: "Maroon",
-                likes: 0,
-            }
-        ]
-    }
- ]
+// const albums = [
+//   {
+//     albumName: "Reputation",
+//     likes: 0,
+//     songs: [
+//       {
+//         name: "Ready for It",
+//         likes: 0,
+//       },
+//       {
+//         name: "Dress",
+//         likes: 0,
+//       },
+//     ],
+//   },
+//   {
+//     albumName: "Midnights",
+//     likes: 0,
+//     songs: [
+//       {
+//         name: "Lavendar Haze",
+//         likes: 0,
+//       },
+//       {
+//         name: "Maroon",
+//         likes: 0,
+//       },
+//     ],
+//   },
+// ];
 
-let songList = [];
+// let songList = [];
 
-// console.log(albums[1].songs[0].name)
-// const songNames = Array.from(albums[0].songs).map(song => song.name)
-console.log(songNames)
+// // console.log(albums[1].songs[0].name)
+// // const songNames = Array.from(albums[0].songs).map(song => song.name)
+// console.log(songNames);
 
-// loop through the  albums and put the song names into an Array
-const makingArraysFromSongsAndAlbums = function () {
-    for (let i = 0; i < albums.length; i++) {
-        const songs = array[i];
-        console.log(songs)
-        songList.push(element);
-        console.log(typeof songList)
-    }
-}
+// // loop through the  albums and put the song names into an Array
+// const makingArraysFromSongsAndAlbums = function () {
+//   for (let i = 0; i < albums.length; i++) {
+//     const songs = array[i];
+//     console.log(songs);
+//     songList.push(element);
+//     console.log(typeof songList);
+//   }
+// };

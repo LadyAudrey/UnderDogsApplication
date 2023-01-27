@@ -51,6 +51,25 @@ html, body {
     padding: 16px;
 }
 
+#results {
+    color: #073d34;
+    font-size: larger;
+}
+
+table, #results {
+    background-color: #073d34;
+    color: #FBEBBB;
+    font-size: larger;
+    border-style:double;
+    border-color: #9c7ea7;
+    border-width: 5px;
+}
+
+.debugInfo {
+    color: #073d34;
+    font-size: medium;
+}
+
 .footer {
     background-color: #9c7ea7;
     color: #073d34;
@@ -71,7 +90,7 @@ Box model, how to utilize it inside Dev tools
 Look at all basic tags and their default display properties
 Stretch goal:
 Create a table using all the core table tags like <thead>, <tbody>, <th>, <tr> and <td>. You can put whatever data you would like in it. Learn how to construct tables and why the tags go where and then style it however you want. Have fun with it! Colors, borders, font styles, etc.
-white_check_mark
+
 */
 
 /*

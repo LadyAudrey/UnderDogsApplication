@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    width: 100vh;
+    height: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+#box {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#shape {
+    position: absolute;
+}
+
+p {
+    background-color: rgb(44, 6, 80);
+    color: antiquewhite;
+    width: 20vw;
+    height: 100vh;
+}

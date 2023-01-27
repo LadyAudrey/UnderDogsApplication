@@ -1,8 +1,7 @@
-// Write a function that takes a string `substring` as an argument and
-//returns an array of all of the words that contain that substring
-//(the substring can appear anywhere in the word).
+// Write a function that takes a string word as an argument and returns a count of all of the “A”s in that string.
 
 // Importing the fs module
+const { checkPrime } = require("crypto");
 let fs = require("fs");
 
 // Intitializing the readFileLines with the file
@@ -14,25 +13,28 @@ let wordsArray = readFileLines("/home/evergreen/UnderDogsAssignments/sowpods");
 let miniWords = readFileLines(
   "/home/evergreen/UnderDogsAssignments/mini.sow.pods"
 );
+
 const superMini = [
   "STAY",
   "REST",
   "NEST",
   "PROFILE",
   "ABCDEFGHIJ",
+  "ANGULAR",
   "PROGRAMING",
 ];
 
-const solutionArray = [];
-
-const containsSubString = function (array, substring) {
-  const subStringUpper = substring.toUpperCase(substring);
-  array.forEach((word) => {
-    if (word.includes(subStringUpper)) {
-      solutionArray.push(word);
+const howManyAs = (word, character) => {
+  let upperWord = word.toUpperCase();
+  let upperLetter = character.toUpperCase();
+  const wordArray = Array.from(upperWord);
+  let counter = 0;
+  for (const letter of wordArray) {
+    if (letter.includes(upperLetter)) {
+      counter++;
     }
-  });
-  return solutionArray;
+  }
+  return counter;
 };
 
-console.log(containsSubString(wordsArray, "tIm"));
+console.log(howManyAs("aardvark", "a"));
