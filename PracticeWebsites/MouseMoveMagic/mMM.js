@@ -24,6 +24,9 @@ let yPosClickDown = 0;
 let xPosClickUp = 0;
 let yPosClickUp = 0;
 
+let xUsed = 0;
+let yUsed = 0;
+
 let lastClickPosition = [];
 
 let mouseDown = document.addEventListener("mousedown", function (e) {
@@ -40,30 +43,66 @@ let mouseUp = document.addEventListener("mouseup", function (e) {
   let absY = Math.abs(yPosClickDown - yPosClickUp);
 
   const distance = Math.hypot(absX, absY);
-  hypotenuseP.textContent = distance;
+  hypotenuseP.textContent =
+    "The area of the square you drew is " + distance * distance + " pixels";
 
   // box div to hold the shape and apply CSS
   this.getElementById("shape").style.width = distance + "px";
   this.getElementById("shape").style.height = distance + "px";
-  this.getElementById("shape").style.borderRadius = "100%";
   this.getElementById("shape").style.backgroundColor =
     "rgba(255, 255, 255, .5)";
 
   //
   if (xPosClickDown < xPosClickUp) {
     this.getElementById("shape").style.left = xPosClickDown + "px";
+    xUsed = xPosClickDown;
   } else {
     this.getElementById("shape").style.left = xPosClickUp + "px";
+    xUsed = xPosClickUp;
   }
 
   if (yPosClickUp < yPosClickDown) {
     this.getElementById("shape").style.top = yPosClickUp + "px";
+    yUsed = yPosClickUp;
   } else {
     this.getElementById("shape").style.top = yPosClickDown + "px";
+    yUsed = yPosClickUp;
   }
 });
 
+// listen for key a strike and shift shape placement
 document.addEventListener("keydown", (e) => {
   // use arrow keys to move shape
-  console.log(e);
+  if (e.key === "a") {
+    xUsed = xUsed - 5;
+    document.getElementById("shape").style.left = xUsed + "px";
+  }
 });
+
+// listen for key d strike and shift shape placement
+document.addEventListener("keydown", (e) => {
+  // use arrow keys to move shape
+  if (e.key === "d") {
+    xUsed = xUsed + 5;
+    document.getElementById("shape").style.left = xUsed + "px";
+  }
+});
+
+// listen for key s strike and shift shape placement
+document.addEventListener("keydown", (e) => {
+  // use arrow keys to move shape
+  if (e.key === "s") {
+    yUsed = yUsed + 5;
+    document.getElementById("shape").style.top = yUsed + "px";
+  }
+});
+
+// listen for key w strike and shift shape placement
+document.addEventListener("keydown", (e) => {
+  // use arrow keys to move shape
+  if (e.key === "w") {
+    yUsed = yUsed - 5;
+    document.getElementById("shape").style.top = yUsed + "px";
+  }
+});
+

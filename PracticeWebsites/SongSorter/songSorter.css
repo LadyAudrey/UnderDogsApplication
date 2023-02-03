@@ -42,13 +42,15 @@ html, body {
     padding-left: 10%;
     border-radius: 10px;
     background-color: #9c7ea7;
-    font-size: 45px;
+    font-size: 55px;
     font-weight: bold;
+    font-size: 45px;
 }
 
 .altChoices {
     text-align: center;
     padding: 16px;
+    font-size: larger;
 }
 
 #results {
@@ -59,15 +61,31 @@ html, body {
 table, #results {
     background-color: #073d34;
     color: #FBEBBB;
-    font-size: larger;
+    font-size: 50px;
     border-style:double;
     border-color: #9c7ea7;
     border-width: 5px;
 }
 
+td, th, tr{
+    padding: 10px 40px 10px 40px;
+    border: 10px;
+    margin: 10px;
+}
+
+td {
+    border: groove 5px #9c7ea7;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .debugInfo {
     color: #073d34;
     font-size: medium;
+}
+
+#both {
+    font-size: larger;
 }
 
 .footer {

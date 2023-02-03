@@ -12,12 +12,12 @@ let albums = [
     songs: [
       {
         name: "Ready for It",
-        songLikes: 0,
+        songLikes: 4,
         timesCalled: 0,
       },
       {
         name: "Dress",
-        songLikes: 0,
+        songLikes: 5,
         timesCalled: 0,
       },
     ],
@@ -28,12 +28,12 @@ let albums = [
     songs: [
       {
         name: "Lavender Haze",
-        songLikes: 0,
+        songLikes: 5,
         timesCalled: 0,
       },
       {
         name: "Maroon",
-        songLikes: 0,
+        songLikes: 7,
         timesCalled: 0,
       },
     ],
@@ -67,7 +67,6 @@ const incrementTimesCalledCounter = function (songString) {
       }
     }
   }
-  console.log(timesCalledArray + "times called array");
   const isAllCalledEnough = (currentNum) => currentNum >= songsArray.length - 1;
   enoughTimes = timesCalledArray.every(isAllCalledEnough);
   return enoughTimes;
@@ -137,6 +136,7 @@ let areWeDone = false;
 // activated function within a button when all likes are different and timesCalled are > length of array
 // hides buttons and creates a new div to display a table of the songs in order of likes
 const showResults = () => {
+  let likesArray = [];
   //hide buttons, and then create table and populate it with albums data
   const buttons = (document.getElementById("buttons").style.display = "none");
   const tableBody = document.getElementById("songData");
@@ -144,19 +144,39 @@ const showResults = () => {
   for (let i = 0; i < albums.length; i++) {
     const album = albums[i];
     for (let j = 0; j < album.songs.length; j++) {
-      const song = album.songs[j].name;
-      console.log(song);
-      results.textContent = song;
+      const songData = album.songs[j];
+      likesArray.push(songData.songLikes);
     }
   }
-  // const songDataRow = userAlbumSongSelection.map((value) => {
-  //   return (
-  //     <tr>
-  //       <td>{value.songName}</td>
-  //       <td>{value.songLikes}</td>
-  //     </tr>
-  //   );
-  // });
+  const sortedLikesArray = likesArray.sort().reverse();
+  const resultsTable = document.getElementById("results");
+  const thead = resultsTable.createTHead();
+  let row = thead.insertRow();
+  let th = document.createElement("th");
+  let songNames = document.createTextNode("Song Names ");
+  let likes = document.createTextNode(" Times Liked");
+  th.appendChild(songNames);
+  row.appendChild(th);
+  th.appendChild(likes);
+  row.appendChild(th);
+  console.log(sortedLikesArray + " sortedLikesArray");
+  for (let i = 0; i < sortedLikesArray.length; i++) {
+    let like = sortedLikesArray[i];
+    let rowData = resultsTable.insertRow(-1);
+    let cell = rowData.insertCell(0);
+    for (let i = 0; i < albums.length; i++) {
+      const album = albums[i];
+      for (let j = 0; j < album.songs.length; j++) {
+        if (album.songs[j].songLikes === like) {
+          const songName = album.songs[j].name;
+          let textName = document.createTextNode(songName);
+          cell.appendChild(textName);
+          let text = document.createTextNode(like);
+          cell.appendChild(text);
+        }
+      }
+    }
+  }
 };
 
 // logic for after each song has been called minimum times
@@ -165,29 +185,36 @@ const showResults = () => {
 
 const findSameLikes = function () {
   console.log("findSameLikes");
-  const songsObjectArray = [];
+  const likesArray = [];
   //create an array of the song names
-  for (let album = 0; album < albums.length; album++) {
-    for (let song = 0; song < albums[album].songs.length; song++) {
-      songsObjectArray.push(albums[album].songs[song]);
+  for (let i = 0; i < albums.length; i++) {
+    const album = albums[i];
+    for (let j = 0; j < album.songs.length; j++) {
+      let songLike = album.songs[j].songLikes;
+      likesArray.push(songLike);
     }
   }
-  for (let i = 0; i < songsObjectArray.length; i++) {
-    const firstSong = songsObjectArray[i];
-    for (let j = 0; j < songsObjectArray.length; j++) {
-      const secondSong = songsObjectArray[j];
-      if (secondSong.name !== firstSong.name) {
-        if (secondSong.songLikes === firstSong.songLikes) {
-          let nextSongs = [secondSong.name, firstSong.name];
-          return nextSongs;
-        }
-      }
-    }
+  const songLikesSet = new Set();
+  for (let i = 0; i < likesArray.length; i++) {
+    let songLike = likesArray[i];
+    songLikesSet.add(songLike);
   }
-  return (areWeDone = true);
+  if (songLikesSet.size === likesArray.length) {
+    console.log(likesArray + "likesArray true");
+    console.log(songLikesSet.size + " set size");
+    return (areWeDone = true);
+  }
+  if (songLikesSet.size < likesArray.length) {
+    console.log(songLikesSet.size + " set size");
+    console.log(likesArray + "likesArray false");
+    return (areWeDone = false);
+  }
+  return "we don't know what's going on";
 };
 
-// functions to listen fo click, increment counters and update text in the buttons
+console.log(findSameLikes());
+
+//functions to listen fo click, increment counters and update text in the buttons
 
 let debugInfoP = document.getElementById("debugInfo");
 
@@ -200,7 +227,7 @@ document.getElementById("songA").addEventListener("click", function () {
   if (enoughTimes === true) {
     console.log("enoughTimes is true");
     let nextSongs = findSameLikes();
-    if ((nextSongs = "everything is different")) {
+    if ((nextSongs = "true")) {
       console.log("show results!!");
       showResults();
     }

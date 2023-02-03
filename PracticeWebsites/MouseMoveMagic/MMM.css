@@ -5,14 +5,23 @@
 body {
     background-color: black;
     display: flex;
-    flex-direction: row;
-    width: 100vh;
-    height: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
 }
 
-#box {
+#breathing {
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+    transition: all 600ms linear;
+}
+
+/* #box {
     height: 100%;
     width: 100%;
     padding: 10px;
@@ -24,8 +33,9 @@ body {
 }
 
 p {
-    background-color: rgb(44, 6, 80);
+    background-color: rgb(105, 21, 2);
     color: antiquewhite;
     width: 20vw;
     height: 100vh;
-}
+} */
+
