@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="side">
+                <h3 class="team">HOME</h3>
+                <h4 class="counter" id="homeCounter">0</h4>
+                <div class="buttons">
+                    <p class="points" onclick="addingHome(1)">+1</p>
+                    <p class="points" onclick="addingHome(2)">+2</p>
+                    <p class="points" onclick="addingHome(3)">+3</p>
+                </div>
+            </div>
+            <div class="side">
+                <h3 class="team">GUEST</h3>
+                <h4 class="counter" id="visitingCounter">0</h4>
+                <div class="buttons">
+                    <p class="points" onclick="addingVisit(1)">+1</p>
+                    <p class="points" onclick="addingVisit(2)">+2</p>
+                    <p class="points" onclick="addingVisit(3)">+3</p>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
